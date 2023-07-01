@@ -9,3 +9,17 @@ The project involves for Java-based web application using Maven, SonarQube, Ansi
 **Continuous Integration**: Jenkins is used as a CI server to build the application. whenever there 
 is a new code, Jenkins automatically pulls the code from GitHub, builds it using Maven, and runs 
 automated tests. If the tests fail, the build is marked as failed and then the team is notified.
+
+**Containerization**: Docker is used to containerize the Java application. The Docker file is stored
+in the Git repository along with the source code. The docker file specifies the environment and dependencies 
+required to run the application.
+
+**Container registry**: The Docker image is pushed to Docker Hub, a public or private Docker Registry. 
+The Docker image can be versioned and tagged for easy identification.
+
+**Continuous Deployment**: Webhooks are used to automate the deployment of the containerized application 
+to Kubernetes. Whenever a new version of the application is pushed to  the Git repo, Webhook will automatically 
+deploy it to the Kubernetes cluster.
+
+Overall, this project demonstrates how to integrate various tools commonly used in software development to 
+streamline the development process, improve code quality, and automate deployment
