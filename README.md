@@ -135,4 +135,12 @@ Exception in thread "main" java.lang.IllegalArgumentException: Multiple command 
 
 URL: http://<jenkins_server_ip>:8080
 
+![unlock](4.png)
+
+Get Jenkins Administrator password using this command:
+
+```
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
 
