@@ -23,3 +23,34 @@ deploy it to the Kubernetes cluster.
 
 Overall, this project demonstrates how to integrate various tools commonly used in software development to 
 streamline the development process, improve code quality, and automate deployment
+
+Configure all the below pre-requisites for the project.
+
+1. Install Jenkins & Ansible & Maven
+
+2. Install Sonarqube
+
+3. Install Kubernetes Cluster
+
+4. Git Account
+
+5. Dockerhub Account
+
+@@ Install Jenkins & Ansible & Maven @@
+
+**************** JENKINS INSTALLATION *****************
+
+Pre-Requisites
+
+Jenkins -Ansible Server Details:
+
+Operating System: Ubuntu
+
+Hostname: jenkins-ansible
+
+RAM: 2 GB
+
+CPU: 1 Core
+
+EC2 Instance: t2.small
+
