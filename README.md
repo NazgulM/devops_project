@@ -143,4 +143,25 @@ Get Jenkins Administrator password using this command:
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
+![sudo](5.png)
+
+![customize](6.png)
+
+![started](7.png)
+
+After completing the installation of the suggested plugin you need to set the First Admin User for Jenkins.
+
+![admin](8.png)
+
+![admin2](9.png)
+
+Click Save and Continue:
+
+![instance](10.png)
+
+Start using Jenkins:
+
+![start](11.png)
+
+
 
