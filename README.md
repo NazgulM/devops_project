@@ -54,3 +54,59 @@ CPU: 1 Core
 
 EC2 Instance: t2.small
 
+![jenkins](2.png)
+
+Update the repository of Ubuntu: 
+
+```
+sudo -i
+sudo apt-get update
+```
+
+Change timezone:
+
+```
+date
+timedatectl
+sudo timedatectl set-timezone America/Chicago
+timedatectl
+date
+```
+
+Change hostname:
+
+```
+hostname
+hostnamectl set-hostname jenkins-ansible
+bash
+hostname
+```
+
+Install Java
+
+```
+java -version
+apt-get install openjdk-11-jdk
+java -version
+```
+
+Install Jenkins:
+
+```
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+/usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+/etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins=2.361.3 -y
+```
+
+Service start, enable and check status:
+
+```
+systemctl start jenkins
+systemctl enable jenkins
+systemctl status jenkins
+```
+
