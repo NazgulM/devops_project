@@ -110,3 +110,29 @@ systemctl enable jenkins
 systemctl status jenkins
 ```
 
+![jenkins](3.png)
+
+Check 8080 port is used or not
+
+```
+netstat -plant | grep 8080
+tcp6       0      0 :::8080                 :::*                    LISTEN      4891/java
+
+jenkins - version
+Running from: /usr/share/java/jenkins.war
+webroot: $user.home/.jenkins
+Exception in thread "main" java.lang.IllegalArgumentException: Multiple command line argument specified: version
+	at winstone.cmdline.CmdLineParser.parse(CmdLineParser.java:67)
+	at winstone.Launcher.getArgsFromCommandLine(Launcher.java:413)
+	at winstone.Launcher.main(Launcher.java:383)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at executable.Main._main(Main.java:334)
+	at executable.Main.main(Main.java:116)
+```
+
+URL: http://<jenkins_server_ip>:8080
+
+
