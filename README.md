@@ -164,4 +164,52 @@ Start using Jenkins:
 ![start](11.png)
 
 
+*************** ANSIBLE INSTALLATION *****************
+
+Add Ansible repository:
+```
+sudo apt-add-repository ppa:ansible/ansible
+```
+
+Now fetch the latest update & install Ansible:
+
+```
+sudo apt update
+sudo apt-get install ansible -y
+```
+
+```
+ansible --version
+ansible [core 2.14.6]
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  ansible collection location = /root/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible
+  python version = 3.10.6 (main, Mar 10 2023, 10:55:28) [GCC 11.3.0] (/usr/bin/python3)
+  jinja version = 3.0.3
+  libyaml = True
+```
+
+**************** MAVEN INSTALLATION *****************
+
+Change dir to /opt and download maven:
+
+$ wget https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+$ tar -xvf apache-maven-3.6.3-bin.tar.gz
+
+Add the following lines to the user profile file (.profile).
+
+M2_HOME='/opt/apache-maven-3.6.3'
+PATH="$M2_HOME/bin:$PATH"
+export PATH
+
+mvn -version
+Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+Maven home: /opt/apache-maven-3.6.3
+Java version: 11.0.19, vendor: Ubuntu, runtime: /usr/lib/jvm/java-11-openjdk-amd64
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "5.19.0-1025-aws", arch: "amd64", family: "unix"
+```
+
 
